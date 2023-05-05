@@ -9,6 +9,7 @@ public class CharacterControl : MonoBehaviour
 
     [SerializeField]
     private GameObject _bulletPrefab;
+
     // Start is called before the first frame update
     void Start()
     {
