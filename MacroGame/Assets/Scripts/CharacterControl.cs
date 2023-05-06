@@ -10,6 +10,10 @@ public class CharacterControl : MonoBehaviour
     [SerializeField]
     private GameObject _bulletPrefab;
 
+    private bool _bulletCanFire = true;
+
+    [SerializeField]
+    private int _lives = 3;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,10 +26,19 @@ public class CharacterControl : MonoBehaviour
     {
         ControlMovement();
 
+        //Timer for the bullets cooldown
+        IEnumerator BullettReloadTimer()
+        {
+            yield return new WaitForSeconds(.5f);
+            _bulletCanFire = true;
+        }
+
         //spawn the bullets
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButton("Fire1") && _bulletCanFire)
         {
             Instantiate(_bulletPrefab, transform.position + new Vector3(0.75f, 0 , 0), Quaternion.identity);
+            _bulletCanFire = false;
+            StartCoroutine(BullettReloadTimer());
         }
     }
 
@@ -48,13 +61,32 @@ public class CharacterControl : MonoBehaviour
         }
 
         //setting the horizontal map borders
-        if (transform.position.x >= 0)
+        if (transform.position.x >= 9)
         {
-            transform.position = new Vector3(0, transform.position.y, 0);
+            transform.position = new Vector3(9, transform.position.y, 0);
         }
         else if (transform.position.x <= -9)
         {
             transform.position = new Vector3(-9, transform.position.y, 0);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Enemy")
+        {
+            Damage();
+            Destroy(other.gameObject);
+        }
+    }
+
+    void Damage()
+    {
+        _lives--;
+
+        if (_lives < 1)
+        {
+            Destroy(this.gameObject);
         }
     }
 }
