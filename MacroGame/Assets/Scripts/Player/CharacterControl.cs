@@ -14,11 +14,20 @@ public class CharacterControl : MonoBehaviour
 
     [SerializeField]
     private int _lives = 3;
+
+    private EnemySpawnManager _spawnManager;
     // Start is called before the first frame update
     void Start()
     {
         //character spawning
         transform.position = new Vector3(-8, 0, 0);
+
+        _spawnManager = GameObject.Find("EnemySpawnManager").GetComponent<EnemySpawnManager>();
+
+        if (_spawnManager == null)
+        {
+            Debug.LogError("The Spawn Manager is NULL");
+        }
     }
 
     // Update is called once per frame
@@ -86,6 +95,7 @@ public class CharacterControl : MonoBehaviour
 
         if (_lives < 1)
         {
+            _spawnManager.OnPlayerdeath();
             Destroy(this.gameObject);
         }
     }

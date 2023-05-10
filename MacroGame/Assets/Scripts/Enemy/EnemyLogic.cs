@@ -32,7 +32,7 @@ public class EnemyLogic : MonoBehaviour
     {
         transform.Translate(Vector3.left * _speed * Time.deltaTime);
 
-        if (transform.position.x <= -10)
+        if (transform.position.x <= -10 && GameObject.Find("Player") != null)
         {
             RandomSpawn();
         }

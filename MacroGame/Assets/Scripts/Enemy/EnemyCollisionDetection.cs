@@ -2,14 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CollisionDetection : MonoBehaviour
+public class EnemyCollisionDetection : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Enemy")
+        if (other.tag != "Enemy")
         {
-            Destroy(other.gameObject);
-            Destroy(this.gameObject); 
+            Destroy(this.gameObject);
         }
     }
 }
