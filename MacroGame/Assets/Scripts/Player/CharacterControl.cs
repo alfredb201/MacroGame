@@ -16,9 +16,13 @@ public class CharacterControl : MonoBehaviour
     private int _lives = 3;
 
     private EnemySpawnManager _spawnManager;
+
+    GameObject shield;
     // Start is called before the first frame update
     void Start()
     {
+        shield = transform.Find("Shield").gameObject;
+        DeactivateShield();
         //character spawning
         transform.position = new Vector3(-8, 0, 0);
 
@@ -66,7 +70,7 @@ public class CharacterControl : MonoBehaviour
         }
         else if (transform.position.y <= -4.5f)
         {
-    transform.position = new Vector3(transform.position.x, -4.5f, 0);
+            transform.position = new Vector3(transform.position.x, -4.5f, 0);
         }
 
         //setting the horizontal map borders
@@ -87,16 +91,49 @@ public class CharacterControl : MonoBehaviour
             Damage();
             Destroy(other.gameObject);
         }
+
+        PowerUp powerUp = other.GetComponent<PowerUp>();
+        if (powerUp)
+        {
+            if (powerUp.activateShield)
+            {
+                ActivateShield();
+            }
+            Destroy(powerUp.gameObject);
+        }
     }
 
     void Damage()
     {
-        _lives--;
 
-        if (_lives < 1)
+        if (HasShield())
         {
-            _spawnManager.OnPlayerdeath();
-            Destroy(this.gameObject);
+            DeactivateShield();
         }
+        else
+        {
+            _lives--;
+
+            if (_lives < 1)
+            {
+                _spawnManager.OnPlayerdeath();
+                Destroy(this.gameObject);
+            }
+        }
+    }
+
+    void ActivateShield()
+    {
+        shield.SetActive(true);
+    }
+
+    void DeactivateShield()
+    {
+        shield.SetActive(false);
+    }
+
+    bool HasShield()
+    {
+        return shield.activeSelf;
     }
 }
