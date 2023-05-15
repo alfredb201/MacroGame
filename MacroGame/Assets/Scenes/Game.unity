@@ -768,7 +768,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &893992914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1150,7 +1150,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1168835982
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1313,7 +1313,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1191507250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1418,7 +1418,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1306847716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1597,6 +1597,10 @@ PrefabInstance:
     - target: {fileID: -8653719598885068355, guid: 0ac2d549faa244f1aaaacb1c595055f5, type: 3}
       propertyPath: m_Name
       value: FlyingSprite
+      objectReference: {fileID: 0}
+    - target: {fileID: -8653719598885068355, guid: 0ac2d549faa244f1aaaacb1c595055f5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 0ac2d549faa244f1aaaacb1c595055f5, type: 3}
       propertyPath: m_RootOrder
@@ -2135,7 +2139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1630476849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2179,6 +2183,10 @@ PrefabInstance:
     - target: {fileID: -8653719598885068355, guid: bbbc56b35536a47d7a7ffb7ba19f5d48, type: 3}
       propertyPath: m_Name
       value: ButterflyEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: -8653719598885068355, guid: bbbc56b35536a47d7a7ffb7ba19f5d48, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: bbbc56b35536a47d7a7ffb7ba19f5d48, type: 3}
       propertyPath: m_RootOrder
@@ -2255,7 +2263,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &1646923557
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2375,7 +2383,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2346750263874510469, guid: 9e7b9520b5e4645c8a417553361e72e7, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2346750263874510471, guid: 9e7b9520b5e4645c8a417553361e72e7, type: 3}
       propertyPath: m_RootOrder
@@ -2541,7 +2549,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3109021853872217415, guid: fd55cc424759048ebbbe1d9e078ae241, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd55cc424759048ebbbe1d9e078ae241, type: 3}

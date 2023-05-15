@@ -39,6 +39,8 @@ public class CharacterControl : MonoBehaviour
     {
         ControlMovement();
 
+     //   FloatingEffect(1.25f, 1.5f, 2f, 3f);
+
         //Timer for the bullets cooldown
         IEnumerator BullettReloadTimer()
         {
@@ -54,6 +56,14 @@ public class CharacterControl : MonoBehaviour
             StartCoroutine(BullettReloadTimer());
         }
     }
+
+  /*  
+   *  void FloatingEffect(float perturbationFactorUp, float perturbationFactorDown, float perturbationFactorLeft, float perturbationFactorRight)
+    {
+        transform.Translate(Vector3.up * (Random.Range((-1f * perturbationFactorUp), (1f * perturbationFactorDown))) * _speed * Time.deltaTime);
+        transform.Translate(Vector3.right * (Random.Range((-1f * perturbationFactorLeft), (1f * perturbationFactorRight))) * _speed * Time.deltaTime);
+    }
+  */
 
     void ControlMovement()
     {
