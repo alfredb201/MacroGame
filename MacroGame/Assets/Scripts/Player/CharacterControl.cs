@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class CharacterControl : MonoBehaviour
 {
+    Movements controls;
+
     [SerializeField]
     private float _speed = 4.5f;
 
     [SerializeField]
     private GameObject _bulletPrefab;
 
-    private bool _bulletCanFire = true;
+    public bool _bulletCanFire = true;
 
     [SerializeField]
     private int _lives = 3;
@@ -18,6 +20,16 @@ public class CharacterControl : MonoBehaviour
     private EnemySpawnManager _spawnManager;
 
     GameObject shield;
+
+    //prova codice vecchio
+    private void Awake()
+    {
+        controls = new Movements();
+        controls.Enable();
+
+        controls.Player.Fire.performed += ctx => Shoot();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,22 +51,9 @@ public class CharacterControl : MonoBehaviour
     {
         ControlMovement();
 
-     //   FloatingEffect(1.25f, 1.5f, 2f, 3f);
+        //   FloatingEffect(1.25f, 1.5f, 2f, 3f);
 
-        //Timer for the bullets cooldown
-        IEnumerator BullettReloadTimer()
-        {
-            yield return new WaitForSeconds(.5f);
-            _bulletCanFire = true;
-        }
-
-        //spawn the bullets
-        if (Input.GetButton("Fire1") && _bulletCanFire)
-        {
-            Instantiate(_bulletPrefab, transform.position + new Vector3(0.75f, 0 , 0), Quaternion.identity);
-            _bulletCanFire = false;
-            StartCoroutine(BullettReloadTimer());
-        }
+       // Shoot();
     }
 
   /*  
@@ -92,6 +91,28 @@ public class CharacterControl : MonoBehaviour
         {
             transform.position = new Vector3(-9, transform.position.y, 0);
         }
+    }
+
+    public void Shoot()
+    {
+        //Timer for the bullets cooldown
+        IEnumerator BullettReloadTimer()
+        {
+            yield return new WaitForSeconds(.5f);
+            _bulletCanFire = true;
+        }
+        //spawn the bullets
+        if ((Input.GetButton("Fire1") || GameObject.Find("FireButton")) && _bulletCanFire)
+        {
+            Instantiate(_bulletPrefab, transform.position + new Vector3(0.75f, 0, 0), Quaternion.identity);
+            _bulletCanFire = false;
+            StartCoroutine(BullettReloadTimer());
+        }
+    }
+
+    public void FireBullet()
+    {
+        Shoot();
     }
 
     private void OnTriggerEnter2D(Collider2D other)

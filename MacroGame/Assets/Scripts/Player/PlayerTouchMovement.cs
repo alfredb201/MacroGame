@@ -10,7 +10,7 @@ public class PlayerTouchMovement : MonoBehaviour
     [SerializeField]
     private FloatingJoystick Joystick;
     [SerializeField]
-    private float _speed = 4.5f;
+    private float _speed = 18f;
 
     private Finger MovementFinger;
     private Vector2 MovementAmount;
