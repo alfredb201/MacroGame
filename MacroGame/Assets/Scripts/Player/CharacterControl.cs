@@ -147,6 +147,7 @@ public class CharacterControl : MonoBehaviour
 
             if (_lives < 1)
             {
+                GameManager.isGameOver = true;
                 _spawnManager.OnPlayerdeath();
                 Destroy(this.gameObject);
             }
