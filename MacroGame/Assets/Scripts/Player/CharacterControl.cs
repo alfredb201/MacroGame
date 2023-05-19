@@ -104,7 +104,7 @@ public class CharacterControl : MonoBehaviour
         //spawn the bullets
         if ((Input.GetButton("Fire1") || GameObject.Find("FireButton")) && _bulletCanFire)
         {
-            Instantiate(_bulletPrefab, transform.position + new Vector3(0.75f, 0, 0), Quaternion.identity);
+            Instantiate(_bulletPrefab, transform.position + new Vector3(1.75f, 2, 0), Quaternion.identity);
             _bulletCanFire = false;
             StartCoroutine(BullettReloadTimer());
         }
