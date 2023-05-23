@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class PlayerAnimations : MonoBehaviour
 {
     private Animator playerAnimator;
@@ -14,6 +14,11 @@ public class PlayerAnimations : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        ShootAnimation();
+    }
+
+    public void ShootAnimation()
+    {
         if (playerAnimator != null)
         {
             if (Input.GetButton("Fire1"))
@@ -24,3 +29,4 @@ public class PlayerAnimations : MonoBehaviour
         }
     }
 }
+
