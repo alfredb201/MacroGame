@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class CharacterControl : MonoBehaviour
 {
-    Movements controls;
-
     [SerializeField]
     private float _speed = 4.5f;
 
@@ -21,22 +19,13 @@ public class CharacterControl : MonoBehaviour
 
     GameObject shield;
 
-    //prova codice vecchio
-    private void Awake()
-    {
-        controls = new Movements();
-        controls.Enable();
-
-        controls.Player.Fire.performed += ctx => Shoot();
-    }
-
     // Start is called before the first frame update
     void Start()
     {
         shield = transform.Find("Shield").gameObject;
         DeactivateShield();
         //character spawning
-        transform.position = new Vector3(-8, 0, 0);
+        transform.position = new Vector3(-8, -2, 0);
 
         _spawnManager = GameObject.Find("EnemySpawnManager").GetComponent<EnemySpawnManager>();
 
@@ -73,6 +62,7 @@ public class CharacterControl : MonoBehaviour
         transform.Translate(Vector3.right* _horizontalMovemet * _speed * Time.deltaTime);
 
         //setting the vertical map borders
+        /*
         if (transform.position.y >= 4.5f)
         {
             transform.position = new Vector3(transform.position.x, 4.5f, 0);
@@ -91,6 +81,7 @@ public class CharacterControl : MonoBehaviour
         {
             transform.position = new Vector3(-9, transform.position.y, 0);
         }
+        */
     }
 
     public void Shoot()
@@ -98,7 +89,7 @@ public class CharacterControl : MonoBehaviour
         //Timer for the bullets cooldown
         IEnumerator BullettReloadTimer()
         {
-            yield return new WaitForSeconds(.5f);
+            yield return new WaitForSeconds(.2f);
             _bulletCanFire = true;
         }
         //spawn the bullets

@@ -12,7 +12,7 @@ public class Shield : MonoBehaviour
     {
         if (spriteRenderer != null)
         {
-            spriteRenderer.enabled = !spriteRenderer.enabled;
+            spriteRenderer.enabled = spriteRenderer.enabled;
         }
     }
 }

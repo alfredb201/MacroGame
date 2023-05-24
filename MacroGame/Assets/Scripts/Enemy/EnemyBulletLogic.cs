@@ -17,7 +17,7 @@ public class EnemyBulletLogic : MonoBehaviour
     {
         transform.Translate(Vector3.left * _speed * Time.deltaTime);
 
-        if (transform.position.x <= -10)
+        if (transform.position.x <= -14)
         {
             Destroy(gameObject);
         }

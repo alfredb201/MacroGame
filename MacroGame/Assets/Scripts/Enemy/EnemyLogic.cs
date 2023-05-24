@@ -11,7 +11,8 @@ public class EnemyLogic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        RandomSpawn();
+        spawnPosition = transform.position;
+        //RandomSpawn();
     }
 
     // Update is called once per frame
@@ -20,21 +21,29 @@ public class EnemyLogic : MonoBehaviour
         ControlMovement();
     }
 
+    void EnemySpawn()
+    {
+        transform.position = spawnPosition;
+    }
+
+    void ControlMovement()
+    {
+        if (transform.position.x > -20 && GameObject.Find("FlyingSprite") != null)
+        {
+            transform.Translate(Vector3.left * _speed * Time.deltaTime);
+        }
+        else
+        {
+            EnemySpawn();
+            //Destroy(this.gameObject);
+        }
+    }
+
     //Random positioning off screen of the round enemy
     void RandomSpawn()
     {
         yPosition = Random.Range(-4.5f, 4.5f);
         spawnPosition = new Vector3(11, yPosition, 0);
         transform.position = spawnPosition;
-    }
-
-    void ControlMovement()
-    {
-        transform.Translate(Vector3.left * _speed * Time.deltaTime);
-
-        if (transform.position.x <= -10 && GameObject.Find("Player") != null)
-        {
-            RandomSpawn();
-        }
     }
 }
