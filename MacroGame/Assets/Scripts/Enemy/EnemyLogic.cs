@@ -28,7 +28,7 @@ public class EnemyLogic : MonoBehaviour
 
     void ControlMovement()
     {
-        if (transform.position.x > -20 && GameObject.Find("FlyingSprite") != null)
+        if (transform.position.x > (spawnPosition.x -23) && GameObject.Find("FlyingSprite") != null)
         {
             transform.Translate(Vector3.left * _speed * Time.deltaTime);
         }
