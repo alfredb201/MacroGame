@@ -15,7 +15,7 @@ public class Stage1Manager : MonoBehaviour
 
     void Update()
     {
-        if (transform.childCount < 6)
+        if (transform.childCount < 1)
         {
             camLock.GetComponent<FollowPlayer>().enabled = true;
         }
