@@ -17,12 +17,6 @@ public class EnemyMoveSin : MonoBehaviour
         sinCenterY = transform.position.y;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     private void FixedUpdate()
     {
         Vector2 pos = transform.position;
