@@ -62,26 +62,25 @@ public class CharacterControl : MonoBehaviour
         transform.Translate(Vector3.right* _horizontalMovemet * _speed * Time.deltaTime);
 
         //setting the vertical map borders
-        /*
-        if (transform.position.y >= 4.5f)
+        
+        if (transform.position.y >= 1.25f)
         {
-            transform.position = new Vector3(transform.position.x, 4.5f, 0);
+            transform.position = new Vector3(transform.position.x, 1.25f, 0);
         }
-        else if (transform.position.y <= -4.5f)
+        else if (transform.position.y <= -5)
         {
-            transform.position = new Vector3(transform.position.x, -4.5f, 0);
+            transform.position = new Vector3(transform.position.x, -5, 0);
         }
 
         //setting the horizontal map borders
-        if (transform.position.x >= 9)
+        if (transform.position.x >= 40)
         {
-            transform.position = new Vector3(9, transform.position.y, 0);
+            transform.position = new Vector3(40, transform.position.y, 0);
         }
         else if (transform.position.x <= -9)
         {
             transform.position = new Vector3(-9, transform.position.y, 0);
         }
-        */
     }
 
     public void Shoot()

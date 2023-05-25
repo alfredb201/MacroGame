@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 3553040438547972026}
   - component: {fileID: 6823819678792440878}
   - component: {fileID: -1614101297393286458}
-  - component: {fileID: -2795422690189255965}
   m_Layer: 3
   m_Name: EnemyBullet
   m_TagString: Enemy
@@ -138,7 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcd6d2840e99c40a2b6f3d6ee198d757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 6
+  _speed: 8
 --- !u!114 &-1614101297393286458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,17 +150,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c5cb8b0044d947a3b1f7fbdba8a2939, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-2795422690189255965
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5655122010621859}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2c67f4268f11432b888f52f5b4597b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  amplitude: -2
-  frequency: 0.5
