@@ -14,8 +14,8 @@ TagManager:
   - Player&Enemies
   - Water
   - UI
-  - 
-  - 
+  - Background
+  - Midground
   - 
   - 
   - 
@@ -49,4 +49,10 @@ TagManager:
     locked: 0
   - name: UI
     uniqueID: 3108227251
+    locked: 0
+  - name: Midground
+    uniqueID: 1524997925
+    locked: 0
+  - name: Background
+    uniqueID: 1043653775
     locked: 0
