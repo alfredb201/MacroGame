@@ -7,6 +7,8 @@ public class Stage1Manager : MonoBehaviour
     private GameObject camLock;
 
     private Transform player;
+
+    private GameObject clouds;
     // Update is called once per frame
     void Start()
     {
@@ -15,6 +17,11 @@ public class Stage1Manager : MonoBehaviour
         camLock.GetComponent<FollowPlayer>().enabled = false;
 
         player = GameObject.Find("FlyingSprite").transform;
+
+        clouds = GameObject.Find("Clouds");
+
+        clouds.GetComponent<CloudsMovement>().enabled = false;
+
     }
 
     void Update()
@@ -29,6 +36,7 @@ public class Stage1Manager : MonoBehaviour
         if (transform.childCount < 1)
         {
             camLock.GetComponent<FollowPlayer>().enabled = true;
+            clouds.GetComponent<CloudsMovement>().enabled = true;
             enabled = false;
         }
 
