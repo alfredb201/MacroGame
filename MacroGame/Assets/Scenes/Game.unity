@@ -1401,7 +1401,7 @@ Animation:
   m_GameObject: {fileID: 1006495914}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 8810ad3925b59437c98def971bf83104, type: 2}
+  m_Animation: {fileID: 7400000, guid: a7419e1db2dad4072a6dfcb29aa75f1b, type: 2}
   m_Animations: []
   m_WrapMode: 0
   m_PlayAutomatically: 1
@@ -2191,7 +2191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6a748a61d91742d696664c1a152b040, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 2
+  _speed: 1
 --- !u!4 &1322891122 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1546294457745264876, guid: 44d1a7120afac466d811613a39eb50ae, type: 3}
@@ -3896,7 +3896,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2109591704
 Transform:
   m_ObjectHideFlags: 0
