@@ -14,9 +14,6 @@ public class CharacterControl : MonoBehaviour
 
     [SerializeField]
     private int _lives = 3;
-
-    private EnemySpawnManager _spawnManager;
-
     GameObject shield;
 
     // Start is called before the first frame update
@@ -26,13 +23,6 @@ public class CharacterControl : MonoBehaviour
         DeactivateShield();
         //character spawning
         transform.position = new Vector3(-8, -2, 0);
-
-        _spawnManager = GameObject.Find("EnemySpawnManager").GetComponent<EnemySpawnManager>();
-
-        if (_spawnManager == null)
-        {
-            Debug.LogError("The Spawn Manager is NULL");
-        }
     }
 
     // Update is called once per frame
@@ -85,6 +75,7 @@ public class CharacterControl : MonoBehaviour
 
     public void Shoot()
     {
+        var poweredUp = false;
         //Timer for the bullets cooldown
         IEnumerator BullettReloadTimer()
         {
@@ -138,7 +129,6 @@ public class CharacterControl : MonoBehaviour
             if (_lives < 1)
             {
                 GameManager.isGameOver = true;
-                _spawnManager.OnPlayerdeath();
                 Destroy(this.gameObject);
             }
         }
