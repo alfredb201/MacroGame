@@ -33,7 +33,7 @@ public class Stage1Manager : MonoBehaviour
             player.position = new Vector3(9, player.position.y, 0);
         }
 
-        if (transform.childCount == 0)
+        if (transform.childCount < 1)
         {
             camLock.GetComponent<FollowPlayer>().enabled = true;
             clouds.GetComponent<CloudsMovement>().enabled = true;
