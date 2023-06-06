@@ -6,16 +6,16 @@ using ETouch = UnityEngine.InputSystem.EnhancedTouch;
 public class PlayerTouchMovement : MonoBehaviour
 {
     [SerializeField]
-    private Vector2 JoystickSize = new Vector2(300, 300);
+    public Vector2 JoystickSize = new Vector2(300, 300);
     [SerializeField]
-    private FloatingJoystick Joystick;
+    public FloatingJoystick Joystick;
     [SerializeField]
     private float _speed = 4.5f;
 
-    private Finger MovementFinger;
-    private Vector2 MovementAmount;
-
-    private void OnEnable()
+    public Finger MovementFinger;
+    public Vector2 MovementAmount;
+    //movementAmount.magnitude instead of get axis
+    public void OnEnable()
     {
         EnhancedTouchSupport.Enable();
         ETouch.Touch.onFingerDown += HandleFingerDown;
@@ -23,7 +23,7 @@ public class PlayerTouchMovement : MonoBehaviour
         ETouch.Touch.onFingerMove += HandleFingerMove;
     }
 
-    private void OnDisable()
+    public void OnDisable()
     {
         ETouch.Touch.onFingerDown -= HandleFingerDown;
         ETouch.Touch.onFingerUp -= HandleLoseFinger;
@@ -31,7 +31,7 @@ public class PlayerTouchMovement : MonoBehaviour
         EnhancedTouchSupport.Disable();
     }
 
-    private void HandleFingerMove(Finger MovedFinger)
+    public void HandleFingerMove(Finger MovedFinger)
     {
         if (MovedFinger == MovementFinger)
         {
@@ -59,7 +59,7 @@ public class PlayerTouchMovement : MonoBehaviour
         }
     }
 
-    private void HandleLoseFinger(Finger LostFinger)
+    public void HandleLoseFinger(Finger LostFinger)
     {
         if (LostFinger == MovementFinger)
         {
@@ -70,7 +70,7 @@ public class PlayerTouchMovement : MonoBehaviour
         }
     }
 
-    private void HandleFingerDown(Finger TouchedFinger)
+    public void HandleFingerDown(Finger TouchedFinger)
     {
         if (MovementFinger == null && TouchedFinger.screenPosition.x <= Screen.width / 2f)
         {
@@ -82,7 +82,7 @@ public class PlayerTouchMovement : MonoBehaviour
         }
     }
 
-    private Vector2 ClampStartPosition(Vector2 StartPosition)
+    public Vector2 ClampStartPosition(Vector2 StartPosition)
     {
         if (StartPosition.x < JoystickSize.x / 2)
         {
@@ -101,7 +101,7 @@ public class PlayerTouchMovement : MonoBehaviour
         return StartPosition;
     }
 
-    private void Update()
+    public void Update()
     {
         transform.Translate(Vector3.up * MovementAmount.y * _speed * Time.deltaTime);
         transform.Translate(Vector3.right * MovementAmount.x * _speed * Time.deltaTime);
