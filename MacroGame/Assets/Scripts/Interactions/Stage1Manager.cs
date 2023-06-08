@@ -28,9 +28,9 @@ public class Stage1Manager : MonoBehaviour
     {
         //set the horizontal borders for the stage
 
-        if (player.position.x >= 9)
+        if (player.position.x >= 5)
         {
-            player.position = new Vector3(9, player.position.y, 0);
+            player.position = new Vector3(5, player.position.y, 0);
         }
 
         if (transform.childCount < 1)

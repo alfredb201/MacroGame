@@ -11,6 +11,7 @@ public class CamLocking : MonoBehaviour
         camLock = GameObject.Find("MainCamera");
 
         camLock.GetComponent<FollowPlayer>().enabled = false;
+
     }
 
     void Update()
