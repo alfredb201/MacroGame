@@ -110,6 +110,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DragonflyEnemySin (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8374980712069429850, guid: 19d77d70715d945d68f72c3d4f046647, type: 3}
+      propertyPath: amplitude
+      value: 1.4
+      objectReference: {fileID: 0}
     - target: {fileID: 9188758952631085317, guid: 19d77d70715d945d68f72c3d4f046647, type: 3}
       propertyPath: m_Bounds.m_Center.x
       value: -0.0015940666
@@ -204,6 +208,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DragonflyEnemySin
       objectReference: {fileID: 0}
+    - target: {fileID: 8374980712069429850, guid: 19d77d70715d945d68f72c3d4f046647, type: 3}
+      propertyPath: amplitude
+      value: 1.4
+      objectReference: {fileID: 0}
     - target: {fileID: 9188758952631085317, guid: 19d77d70715d945d68f72c3d4f046647, type: 3}
       propertyPath: m_Bounds.m_Center.y
       value: -0.00014019012
@@ -212,7 +220,8 @@ PrefabInstance:
       propertyPath: m_Bounds.m_Extent.x
       value: 5.933777
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8374980712069429851, guid: 19d77d70715d945d68f72c3d4f046647, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 19d77d70715d945d68f72c3d4f046647, type: 3}
 --- !u!4 &6035193092970969618 stripped
 Transform:
@@ -396,7 +405,8 @@ PrefabInstance:
       propertyPath: m_Bounds.m_Center.y
       value: -0.00014019012
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8374980712069429851, guid: 19d77d70715d945d68f72c3d4f046647, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 19d77d70715d945d68f72c3d4f046647, type: 3}
 --- !u!4 &3088174624826385816 stripped
 Transform:

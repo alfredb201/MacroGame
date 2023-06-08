@@ -22,7 +22,7 @@ public class CharacterControl : MonoBehaviour
         shield = transform.Find("Shield").gameObject;
         DeactivateShield();
         //character spawning
-        transform.position = new Vector3(-8, -2, 0);
+        transform.position = new Vector3(-4, -2, 0);
     }
 
     // Update is called once per frame
