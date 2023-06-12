@@ -735,6 +735,7 @@ GameObject:
   m_Component:
   - component: {fileID: 566239577}
   - component: {fileID: 566239576}
+  - component: {fileID: 566239578}
   m_Layer: 7
   m_Name: Column
   m_TagString: Untagged
@@ -809,6 +810,20 @@ Transform:
   m_Father: {fileID: 413377630}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 11.122}
+--- !u!114 &566239578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 566239575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38898b1bfa2c84494a7661982ccf5b12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 1.5
+  touch: {fileID: 1006495920}
 --- !u!4 &684151933 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -5375876589135252157, guid: 0ac2d549faa244f1aaaacb1c595055f5, type: 3}
@@ -875,7 +890,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 888784409}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.1, y: 0.6265166, z: -0.2062242}
+  m_LocalPosition: {x: 2.7, y: 0.6265166, z: -0.2062242}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -944,6 +959,7 @@ GameObject:
   m_Component:
   - component: {fileID: 917792974}
   - component: {fileID: 917792975}
+  - component: {fileID: 917792976}
   m_Layer: 0
   m_Name: Sun
   m_TagString: Untagged
@@ -1018,6 +1034,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &917792976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917792973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38898b1bfa2c84494a7661982ccf5b12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 1.5
+  touch: {fileID: 1006495920}
 --- !u!1001 &924472945
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1613,6 +1643,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1053610412}
   - component: {fileID: 1053610413}
+  - component: {fileID: 1053610414}
   m_Layer: 3
   m_Name: Square
   m_TagString: Untagged
@@ -1687,6 +1718,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1053610414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053610411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38898b1bfa2c84494a7661982ccf5b12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 4.5
+  touch: {fileID: 1006495920}
 --- !u!1 &1064053052
 GameObject:
   m_ObjectHideFlags: 0
@@ -1697,6 +1742,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1064053053}
   - component: {fileID: 1064053054}
+  - component: {fileID: 1064053055}
   m_Layer: 8
   m_Name: Land
   m_TagString: Untagged
@@ -1712,7 +1758,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1064053052}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.08, y: 0.6265166, z: -0.2062242}
+  m_LocalPosition: {x: 2.68, y: 0.6265166, z: -0.2062242}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1771,6 +1817,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1064053055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064053052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38898b1bfa2c84494a7661982ccf5b12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 1.5
+  touch: {fileID: 1006495920}
 --- !u!1 &1115828734
 GameObject:
   m_ObjectHideFlags: 0
@@ -2092,7 +2152,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1314208583}
   - component: {fileID: 1314208584}
-  - component: {fileID: 1314208585}
   - component: {fileID: 1314208586}
   m_Layer: 0
   m_Name: Clouds
@@ -2168,18 +2227,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1314208585
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1314208582}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6a748a61d91742d696664c1a152b040, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1314208586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2192,7 +2239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22914fd10c81f447b93989045c34d898, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 1
+  _speed: 0.7
   touch: {fileID: 1006495920}
 --- !u!4 &1322891122 stripped
 Transform:
@@ -3516,7 +3563,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1665303143}
   - component: {fileID: 1665303146}
-  - component: {fileID: 1665303145}
   - component: {fileID: 1665303144}
   m_Layer: 0
   m_Name: Clouds (1)
@@ -3552,20 +3598,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22914fd10c81f447b93989045c34d898, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 1
+  _speed: 0.7
   touch: {fileID: 1006495920}
---- !u!114 &1665303145
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1665303142}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6a748a61d91742d696664c1a152b040, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &1665303146
 SpriteRenderer:
   m_ObjectHideFlags: 0

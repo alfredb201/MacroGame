@@ -26,14 +26,16 @@ public class Stage2Manager : MonoBehaviour
     void Update()
     {
         //set the horizontal borders for the stage
-
-        if (player.position.x >= 23)
+        if (transform.childCount > 1)
         {
-            player.position = new Vector3(23, player.position.y, 0);
-        }
-        else if (player.position.x <= 5)
-        {
-            player.position = new Vector3(5, player.position.y, 0);
+            if (player.position.x >= 23)
+            {
+                player.position = new Vector3(23, player.position.y, 0);
+            }
+            else if (player.position.x <= 5)
+            {
+                player.position = new Vector3(5, player.position.y, 0);
+            }
         }
 
         if (transform.childCount < 1)
