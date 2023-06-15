@@ -12,8 +12,8 @@ public class CharacterControl : MonoBehaviour
 
     public bool _bulletCanFire = true;
 
-    [SerializeField]
-    private int _lives = 3;
+    //[SerializeField]
+    //private int _lives = 3;
     GameObject shield;
 
     // Start is called before the first frame update
@@ -124,9 +124,9 @@ public class CharacterControl : MonoBehaviour
         }
         else
         {
-            _lives--;
+            HealthManager.health --;
 
-            if (_lives < 1)
+            if (HealthManager.health < 2)
             {
                 GameManager.isGameOver = true;
                 Destroy(this.gameObject);
